@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel de Carros</title>
+</head>
+<body>
+    <header>
+        <h1>Aluguel de Carros</h1>
+        <ul>
+            <li><a href="../Index.html">Home</a></li>
+            <li><a href="Alugar.html">Alugar</a></li>
+        </ul>
+    </header>
+    <main>
+        <img src="../Imagens/Alugar.png" alt="Carros para alugar" width="600" />
+        <h2>Solicitar Aluguel</h2>
+
+        <form method="get">
+            CPF: <input type="text" size="14" maxlength="14" placeholder="CPF" autofocus required name="cpf" />
+            E-mail: <input type="email" size="30" maxlength="30" placeholder="E-mail" required name="email" />
+            Tipo de Aluguel: <select name="tipo" required>
+                <option value="" disabled selected>Escolha...</option>
+                <option value="diaria">Diária</option>
+                <option value="mensal">Mensal</option>
+                <option value="anual">Anual</option>
+            </select>
+            Período: <input type="number" min="1" max="30" name="periodo" />
+            <br /><br />
+            Modelo: 
+            <input type="radio" name="modelo" value="compacto" />Compacto
+            <input type="radio" name="modelo" value="sedan" />Sedan
+            <input type="radio" name="modelo" value="SUV" />SUV
+
+            <input type="checkbox" name="seguro" value="sim" />Adicionar Seguro?
+            <br /><br />
+            Local para retirada: <br />
+            <textarea name="local" cols="50" rows="2" placeholder="Informe o local para retirar o veículo"></textarea>
+            <br /><br />
+            <table border>
+                <caption>Pagamento - Cartão de Crédito</caption>
+                <tr>
+                    <th>Número/Código:</th>
+                    <td>
+                        <input type="text" size="16" maxlength="16" name="numcartao" /> /
+                        <input type="password" size="3" maxlength="3" name="codcartao" /> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>Bandeira:</th>
+                    <td>
+                        <input type="radio" name="bandeira" value="visa" />
+                        <img src="../Imagens/visa.gif" alt="Bandeira Visa" />
+                        <input type="radio" name="bandeira" value="master" />
+                        <img src="../Imagens/master.gif" alt="Bandeira MasterCard" />
+                        <input type="radio" name="bandeira" value="amex" />
+                        <img src="../Imagens/amex.gif" alt="Bandeira American Express" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Parcelar?</th>
+                    <td><input type="checkbox" name="parc" value="sim" />Sim</td>
+                </tr>
+            </table>
+            <br /><br />
+            <input type="submit" value="Enviar Solicitação" />
+            <input type="reset" value="Apagar Tudo" />
+        </form>
+    </main>    
+</body>
+</html>
