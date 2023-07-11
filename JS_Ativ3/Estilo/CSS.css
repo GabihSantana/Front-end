@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap');
+
+:root {
+    --cor-fonte-principal: steelblue;
+    --cor-fonte-secundaria:midnightblue ;
+    --cor-fundo-principal: powderblue;
+    --cor-fundo-secundaria: white ;    
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sirin Stencil', cursive;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--cor-fonte-principal);
+    background-color: var(--cor-fundo-principal);
+}
+img {
+    width: 100%;
+}
+header {
+    top: 0;
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-fundo-secundaria);
+    z-index: 1;
+}
+main {    
+    top: 4rem;  
+    min-height: calc(100% - 4rem);
+    width: 100%;
+    position: absolute;
+}
+.container {
+    max-height: 200%;
+    width: 100%;
+    margin: 1rem auto;
+    display: grid; 
+    gap: 1rem;  
+    align-items: center;
+    padding: 20px 0px;
+    color: var(--cor-fonte-secundaria);
+    background-color: var(--cor-fundo-secundaria);
+}
+.superior, .inferior {        
+    grid-template-columns: 1fr;	
+}
+select, option, input {
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    text-align: inherit;
+    margin: 5px;
+}
+#div_config_poligono input {
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-fonte-secundaria)
+}
+#div_poligono {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--cor-fundo-principal);
+    border: 2px dotted var(--cor-fonte-secundaria);
+    font-size: 0.75rem;
+}
+#p_perimetro {
+    margin-top: 10px;
+}
+#div_zoom {
+    width: 60%;
+    display: flex;
+    margin: auto;
+}
+#img_zoom {
+    width: 100px;
+}
+#zoom_in, #zoom_out {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    margin: 20px auto;
+    cursor: pointer;
+    background-size:cover;
+}
+#zoom_in {
+    background-image: url("../Imagens/zoom_in.png");
+}
+#zoom_in:hover {
+    background-image: url("../Imagens/zoom_in.gif");
+}
+#zoom_out {
+    background-image: url("../Imagens/zoom_out.png");
+}
+#zoom_out:hover {
+    background-image: url("../Imagens/zoom_out.gif");
+}
+p {
+    margin: 0;
+}
+#link_aumentar, #link_diminuir {
+    padding: 5px;
+    line-height: 2.5rem;
+    cursor: pointer;
+}
+#link_aumentar:hover {
+    background-color: rgba(127, 224, 230, 50%);
+}
+#link_diminuir:hover {
+    background-color: rgba(127, 224, 230, 50%);
+}
+#img_redimensiona {
+    width: 100px;
+}
+
+@media (min-width: 768px) { 
+    header{
+        font-size: 2rem;
+    }
+    main {        
+        height: calc(100% - 4rem);
+    }
+    .container {
+        height: 35%; 
+        width: 90%;
+        margin: 2rem auto;
+    }
+    #div_zoom {
+        display: block;
+    }
+    .superior, .inferior {
+        grid-template-columns: repeat(4, 1fr);
+    } 
+}

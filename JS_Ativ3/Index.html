@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Estilo/CSS.css" />
+    <link rel="icon" href="Imagens/javascript.png" />
+    <title>Atividade JavaScript</title>
+</head>
+<body>
+    <header>
+        Funcionalidades JavaScript
+    </header>
+    <main>
+        <div class="container superior">
+
+           <div id="div_config_poligono">        
+                Dimensões: <br />
+                Largura: <input type="number" id="num_largura" min="50" max="100" value="50" /> px <br />
+                Altura: <input type="number" id="num_altura" min="50" max="100" value="50" /> px
+            </div>
+
+            <div>
+                <div id="div_poligono"></div>
+                <p id="p_perimetro"></p>
+            </div> 
+
+            <div id="div_zoom">                
+                <div id="zoom_in"></div>
+                <div id="zoom_out"></div>
+            </div> 
+
+            <div>                
+                <img id="img_zoom" src="Imagens/around.png" alt="Globo" /><br />
+            </div> 
+        </div>
+
+        <div class="container inferior">
+            <div>        
+                Preencha 2 valores: <br />
+                Valor 1: <input type="number" id="num_valor1" min="1" max="50" /> <br />
+                Valor 2: <input type="number" id="num_valor2" min="1" max="50" />
+            </div>               
+                   
+            <div>            
+                <input type="button" id="bt_soma" value="Somar" /> <br />
+                <input type="button" id="bt_multiplica" value="Multiplicar" />
+                <br /><br />
+                Resultado:
+                <input type="text" id="txt_resultado" size="5" disabled /> 
+            </div>  
+
+            <div>            
+                <p><a id="link_aumentar">Aumentar</a></p>
+                <p><a id="link_diminuir">Diminuir</a></p>
+            </div>
+
+            <div>
+                <img id="img_redimensiona" src="Imagens/idea.png" alt="Lâmpada" />
+            </div> 
+
+        </div>
+
+    </main>
+       
+    <script src="Scripts/jscript.js"></script>        
+</body>
+</html>
